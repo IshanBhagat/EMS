@@ -20,6 +20,7 @@ services:
       - "8000:8000"
     environment:
       DATABASE_URL: postgres://ems_user:ems_password@db:5432/ems_db
+    command: python manage.py runserver 0.0.0.0:8000
     depends_on:
       - db
 
